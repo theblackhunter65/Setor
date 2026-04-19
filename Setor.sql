@@ -26,3 +26,15 @@ VALUES('Jose', '1500', '2026-04-04 15:09:00');
  
 select * from funcionario; 
 select * from registros; 
+
+Select 
+funcionario.ID, 
+funcionario.nome,
+funcionario.salario,
+funcionario.email,
+funcionario.cpf,
+registros.id AS registros_id,
+registros.serial_number,
+registros.data_hora
+from funcionario
+inner join registros on funcionario.nome =registros.funcionario;
